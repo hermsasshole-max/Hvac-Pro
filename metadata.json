@@ -1,0 +1,6 @@
+{
+  "name": "HVAC-R Technician Tools",
+  "description": "Pressure calculation and job logging for HVAC-R technicians.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

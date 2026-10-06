@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "JobLog": {
+      "title": "JobLog",
+      "description": "A recorded HVAC-R job entry.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "clientName": { "type": "string" },
+        "location": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "refrigerant": { "type": "string" },
+        "systemCategory": { "type": "string" },
+        "ambientTemp": { "type": "number" },
+        "suctionPressure": { "type": "number" },
+        "highPressure": { "type": "number" },
+        "notes": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["clientName", "timestamp", "userId"]
+    }
+  },
+  "firestore": {
+    "/jobLogs/{jobLogId}": {
+      "schema": { "$ref": "JobLog" },
+      "description": "Collection of job logs."
+    }
+  }
+}
